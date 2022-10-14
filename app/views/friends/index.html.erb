@@ -3,12 +3,22 @@
 <h1>Friends</h1>
 
 <div id="friends">
-  <% @friends.each do |friend| %>
-    <%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend %>
-    </p>
-  <% end %>
+  <table class="table table table-striped">
+    <thead class="table-group-divider">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Twitter</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    <% @friends.each do |friend| %>
+      <%= render friend %>
+    <% end %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New friend", new_friend_path %>
