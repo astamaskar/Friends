@@ -16,10 +16,12 @@
     <%= render 'home/header' %>
     <div class="container">
     
-      <% if notice %>
+      <% if notice or alert %>
         <br>
         <%= render 'home/alert' %>
       <% end %>
+
+
 
       <br>
       <%= yield %>
