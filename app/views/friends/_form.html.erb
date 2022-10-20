@@ -31,6 +31,11 @@
     <%= form.label :twitter %>
   </div>
 
+  <div class="form-floating mb-3 col-lg-4">
+    <%= form.number_field :user_id, id: :friend_user_id, class: "form-control", value: current_user.id, type: :hidden %>
+    <!--%= form.label :user_id %-->
+  </div>
+
   <div>
     <%= form.submit class: "btn btn-primary" %>
   </div>
